@@ -12,7 +12,8 @@ const PATHS = {
 process.env.BABEL_ENV = TARGET;
 
 var common = {
-    entry: PATHS.app,
+    //entry: PATHS.app,
+    entry: './app/cats.jsx',
     resolve: {
         extensions: ['', '.js', '.jsx']
     },
@@ -32,7 +33,8 @@ var common = {
     },
     plugins: [
         new HtmlwebpackPlugin({
-            title: 'React Cats'
+            title: 'React Cats',
+            filename: 'cats.html'
         })
     ]
 };

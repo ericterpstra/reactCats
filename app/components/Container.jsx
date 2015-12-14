@@ -39,7 +39,7 @@ export default class Container extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container group">
 
                 <div className="headerMsg">
                     <p>There are currently {this.props.cats.length} cats available for adoption.</p>

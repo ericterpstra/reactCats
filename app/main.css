@@ -17,8 +17,8 @@ body {
 }
 
 .container {
-    width: 908px;
-    margin: 0 auto;
+    width: 900px;
+    margin: 20px auto 0;
 }
 
 .headerMsg {
@@ -67,9 +67,9 @@ body {
 
 .listButtons a, a.btn {
     color: #FFD6D6;
-    padding: 4px;
+    padding: 8px;
     text-decoration: none;
-    border: 1px solid #FFD6D6;
+    border: 1px solid #750000;
     border-radius: 4px;
 }
 
@@ -99,7 +99,7 @@ body {
 .carousel-container {
     float: left;
     height: 220px;
-    width: 370px;
+    width: 362px;
     padding: 0 25px 0 0;
     overflow: hidden;
 }

@@ -22,7 +22,6 @@ export default class App extends React.Component {
             method: 'get',
             contentType: 'application/json',
             success: (res) => {
-                debugger;
                 let cats = res.petfinder.pets.pet;
                 this.setState({
                     cats: cats

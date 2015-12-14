@@ -15,11 +15,13 @@ const DetailView = React.createClass({
         };
     },
 
-    onBackClick() {
+    onBackClick(e) {
+        e.preventDefault();
         this.props.onBackClick(this.props.page);
     },
 
-    nextCat(nextIndex) {
+    nextCat(nextIndex, e) {
+        e.preventDefault();
         let idx = this.state.index + nextIndex;
         if ( idx < 0 ) idx = (this.props.cats.length - 1);
         if ( idx >= this.props.cats.length ) idx = 0;
