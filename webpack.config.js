@@ -63,3 +63,23 @@ if(TARGET === 'start' || !TARGET) {
     });
 
 }
+
+if(TARGET === 'build') {
+    module.exports = merge(common, {
+        output: {
+            path: PATHS.build,
+            filename: 'bundle.js'
+        },
+        devtool: 'source-map',
+        plugins: [
+            new webpack.DefinePlugin({
+                'process.env.NODE_ENV': JSON.stringify('production')
+            }),
+            new webpack.optimize.UglifyJsPlugin({
+                compress: {
+                    warnings: false
+                }
+            })
+        ]
+    });
+}
