@@ -13,13 +13,14 @@
     "html-webpack-plugin": "^1.7.0",
     "json-loader": "^0.5.4",
     "react-transform-hmr": "^1.0.1",
+    "style-loader": "^0.13.1",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0",
     "webpack-merge": "^0.3.2"
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack -v"
   },
   "dependencies": {
     "react": "^0.14.3",

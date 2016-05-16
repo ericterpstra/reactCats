@@ -7,11 +7,11 @@ var CatTranslator = {
     translateCat : function translateCat(catObj) {
         var cat = {};
         cat.pics = [];
-        cat.id = catObj.id.$t;
-        cat.name = catObj.name.$t;
-        cat.description = catObj.description.$t;
-        cat.sex = catObj.sex.$t === "M" ? "Male" : "Female";
-        cat.age = catObj.age.$t;
+        cat.id = getCattribute(catObj,'id');
+        cat.name = getCattribute(catObj,'name');
+        cat.description = getCattribute(catObj,'description');
+        cat.sex = getCattribute(catObj,'sex') === "M" ? "Male" : "Female";
+        cat.age = getCattribute(catObj,'age');
         cat.size = getSize(catObj.size.$t);
         cat.breed = getBreeds(catObj.breeds);
         cat.thumbnail = getThumb(catObj.media.photos.photo);
@@ -33,6 +33,14 @@ var getBreeds = function getBreeds(breeds) {
     }
     return breedName;
 };
+
+
+var getCattribute = function(cat, key) {
+    if ( key in cat && cat[key].$t ) {
+        return cat[key].$t;
+    }
+    return '';
+}
 
 // Gets a single thumbnail from the list of available pictures.
 var getThumb = function getThumb(photoArray){
